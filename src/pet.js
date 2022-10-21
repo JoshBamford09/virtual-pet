@@ -1,11 +1,11 @@
 const MAXIMUM_FITNESS = 10;
-const STARTING_AGE = 0;
-const STARTING_HUNGER = 0;
+const MINIMUM_AGE = 0;
+const MINIMUM_HUNGER = 0;
 
 function Pet(name) {
     this.name = name;
-    this.age = STARTING_AGE;
-    this.hunger = STARTING_HUNGER;
+    this.age = MINIMUM_AGE;
+    this.hunger = MINIMUM_HUNGER;
     this.fitness = MAXIMUM_FITNESS;
 };
 
@@ -24,10 +24,10 @@ Pet.prototype.walk = function() {
 };
 
 Pet.prototype.feed = function() {
-    if ((this.hunger - 3) >= STARTING_HUNGER ) {
+    if ((this.hunger - 3) >= MINIMUM_HUNGER ) {
         this.hunger -= 3;
     } else {
-        this.hunger = STARTING_HUNGER;
+        this.hunger = MINIMUM_HUNGER;
     };
 };
 
