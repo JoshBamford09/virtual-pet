@@ -62,3 +62,19 @@ describe('walk', () => {
         expect(pet.fitness).toEqual(10);  
     })
 });
+describe('feed', () => {
+    it('Decreases pets hunger level by 3', () => {
+        const pet = new Pet ('Fido');
+        pet.hunger = 5;
+        pet.feed();
+
+        expect(pet.hunger).toEqual(2);
+    });
+    it('Decreases pets hunger to a minimum of 0', () => {
+        const pet = new Pet ('Fido');
+        pet.hunger = 2;
+        pet.feed();
+
+        expect(pet.hunger).toEqual(0);
+    });    
+});
