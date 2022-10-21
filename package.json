@@ -1,0 +1,18 @@
+{
+  "name": "virtual-pet",
+  "version": "1.0.0",
+  "description": "virtual pet",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "main"
+  },
+  "devDependencies": {
+    "jest": "^29.2.1"
+  }
+}
