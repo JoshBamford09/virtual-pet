@@ -32,16 +32,21 @@ Pet.prototype.feed = function() {
 };
 
 Pet.prototype.checkUp = function() { 
-    if ((this.fitness <= 3 ) && (this.hunger >= 5)) {
+    const hungryAndUnfit = ((this.fitness <= 3 ) && (this.hunger >= 5));
+    const unfit = (this.fitness <= 3);
+    const hungry = (this.hunger >= 5);
+    const feelsGreat = 'I feel great!'
+    
+    if (hungryAndUnfit == true) {
         return 'I am hungry AND I need a walk!'
     };
-    if (this.fitness <= 3) {
+    if (unfit == true) {
         return 'I need a walk!'
     };
-    if (this.hunger >= 5) {
+    if (hungry == true) {
         return 'I am hungry!'
     };
-    return 'I feel great!'
+    return feelsGreat;
     
 };
 
