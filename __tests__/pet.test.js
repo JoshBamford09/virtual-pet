@@ -140,3 +140,35 @@ describe('checkUp', () => {
         expect(pet.checkUp()).toBe('I feel great!');
     });
 });
+describe('isAlive', () => {
+    it('Retuns TRUE if the Age < 30, Hunger < 10 and Fitness > 0. Returns false if anything else ', () => {
+        const pet = new Pet('Fido');
+        this.age = 25;
+        this.hunger = 7;
+        this.fitness = 4;
+        pet.isAlive();
+
+        expect(pet.isAlive()).toBe(true);
+
+        this.age = 34;
+        this.hunger = 8;
+        this.fitness = 10;
+        pet.isAlive();
+
+        expect(pet.isAlive()).toBe(false);
+
+        this.age = 15;
+        this.hunger = 10;
+        this.fitness = 2;
+        pet.isAlive();
+
+        expect(pet.isAlive()).toBe(false);
+
+        this.age = 19;
+        this.hunger = 3;
+        this.fitness = 0;
+        pet.isAlive();
+
+        expect(petisAlive()).toBe(false);
+    });
+});
